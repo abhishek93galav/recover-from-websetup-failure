@@ -1,0 +1,8 @@
+- name: sample playbook that runs on webstup playbook failure
+  hosts: webservers
+  become: true
+  gather_facts: false
+  tasks:
+          - name: reverting the changes
+            ansible.builtin.debug:
+                    msg: "the host {{ ansible_facts['fqdn'] }} changes are reverted"
