@@ -1,7 +1,7 @@
 - name: sample playbook that runs on webstup playbook failure
   hosts: webservers
   become: true
-#  gather_facts: false
+  gather_facts: false
   tasks:
           - name: reverting the changes
             ansible.builtin.debug:
